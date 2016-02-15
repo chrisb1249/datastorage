@@ -1,5 +1,6 @@
 # script to transform and load hopsital files
 
+rm ~/hospital_compare/*.*
 rm ~/fwork/*.*
 rm ~/frenamed/*.*
 rm ~/fnoheader/*.*
@@ -18,7 +19,7 @@ mkdir ~/fnoheader
 
 #copy rawfiles over
 
-cp ~/hospital_compare/*.* ~/fwork
+cp ~/fupload/*.* ~/fwork
 
 #remove spaces from filenames
 
@@ -48,14 +49,10 @@ tail -n +2 ~/frenamed/hvbp.csv > ~/fnoheader/hvbp.csv
 
 #update files in /hosptital_compare with renamed and trimmed files
 
-rm ~/hospital_bak/*.*
-cp ~/hospital_compare/*.* ~/hospital_bak
-
-rm ~/hospital_compare/*.*
 cp ~/fnoheader/*.* ~/hospital_compare
 
 # load into hdfs
 
-#hdfs dfs -mkdir /user/w205/hospital_compare
-#hdfs dfs -put ~/hospital_compare/*.* /user/w205
-#hdfs dfs -ls /user/w205
+hdfs dfs -mkdir /user/w205/hospital_compare
+hdfs dfs -put ~/hospital_compare/*.* /user/w205/hospital_compare
+hdfs dfs -ls /user/w205/hospital_compare
