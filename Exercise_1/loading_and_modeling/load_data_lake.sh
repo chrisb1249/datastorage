@@ -56,5 +56,6 @@ cp ~/fnoheader/*.* ~/hospital_compare
 
 # load into hdfs
 
-hdfs dfs -put ~/hospital_compare/*.* /user/w205
-hdfs dfs -ls /user/w205
+#hdfs dfs -mkdir /user/w205/hospital_compare
+#hdfs dfs -put ~/hospital_compare/*.* /user/w205
+#hdfs dfs -ls /user/w205
