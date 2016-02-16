@@ -1,3 +1,4 @@
+# 2/14/16 - Chris Bennett
 # script to transform and load hopsital files
 
 rm ~/hospital_compare/*.*
@@ -53,6 +54,7 @@ cp ~/fnoheader/*.* ~/hospital_compare
 
 # load into hdfs
 
-hdfs dfs -mkdir /user/w205/hospital_compare
+#hdfs dfs -mkdir /user/w205/hospital_compare
+hdfs dfs -rm ~/hospital_compare/*.csv
 hdfs dfs -put ~/hospital_compare/*.* /user/w205/hospital_compare
 hdfs dfs -ls /user/w205/hospital_compare
