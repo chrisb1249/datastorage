@@ -54,7 +54,49 @@ cp ~/fnoheader/*.* ~/hospital_compare
 
 # load into hdfs
 
-#hdfs dfs -mkdir /user/w205/hospital_compare
-hdfs dfs -rm ~/hospital_compare/*.csv
-hdfs dfs -put ~/hospital_compare/*.* /user/w205/hospital_compare
-hdfs dfs -ls /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare
+hdfs dfs -rm /user/w205/hospital_compare/*.*
+
+hdfs dfs -mkdir /user/w205/hospital_compare/hospitals
+hdfs dfs -mkdir /user/w205/hospital_compare/complications
+hdfs dfs -mkdir /user/w205/hospital_compare/hcahps
+hdfs dfs -mkdir /user/w205/hospital_compare/infections
+hdfs dfs -mkdir /user/w205/hospital_compare/measures
+hdfs dfs -mkdir /user/w205/hospital_compare/spendingperpatient
+hdfs dfs -mkdir /user/w205/hospital_compare/payment
+hdfs dfs -mkdir /user/w205/hospital_compare/readmissions
+hdfs dfs -mkdir /user/w205/hospital_compare/timelycare
+hdfs dfs -mkdir /user/w205/hospital_compare/hvbp
+
+hdfs dfs -rm /user/w205/hospital_compare/hospitals/*.*
+hdfs dfs -rm /user/w205/hospital_compare/complications/*.*
+hdfs dfs -rm /user/w205/hospital_compare/hcahps/*.*
+hdfs dfs -rm /user/w205/hospital_compare/infections/*.*
+hdfs dfs -rm /user/w205/hospital_compare/measures/*.*
+hdfs dfs -rm /user/w205/hospital_compare/spendingperpatient/*.*
+hdfs dfs -rm /user/w205/hospital_compare/payment/*.*
+hdfs dfs -rm /user/w205/hospital_compare/readmissions/*.*
+hdfs dfs -rm /user/w205/hospital_compare/timelycare/*.*
+hdfs dfs -rm /user/w205/hospital_compare/hvbp/*.*
+
+hdfs dfs -put ~/hospital_compare/hospitals.csv /user/w205/hospital_compare/hospitals
+hdfs dfs -put ~/hospital_compare/complications.csv /user/w205/hospital_compare/complications
+hdfs dfs -put ~/hospital_compare/hcahps.csv /user/w205/hospital_compare/hcahps
+hdfs dfs -put ~/hospital_compare/infections.csv /user/w205/hospital_compare/infections
+hdfs dfs -put ~/hospital_compare/measures.csv /user/w205/hospital_compare/measures
+hdfs dfs -put ~/hospital_compare/spendingperpatient.csv /user/w205/hospital_compare/spendingperpatient
+hdfs dfs -put ~/hospital_compare/payment.csv /user/w205/hospital_compare/payment
+hdfs dfs -put ~/hospital_compare/readmissions.csv /user/w205/hospital_compare/readmissions
+hdfs dfs -put ~/hospital_compare/timelycare.csv /user/w205/hospital_compare/timelycare
+hdfs dfs -put ~/hospital_compare/hvbp.csv /user/w205/hvbp
+
+hdfs dfs -ls /user/w205/hospital_compare/hospitals
+hdfs dfs -ls /user/w205/hospital_compare/complications
+hdfs dfs -ls /user/w205/hospital_compare/hcahps
+hdfs dfs -ls /user/w205/hospital_compare/infections
+hdfs dfs -ls /user/w205/hospital_compare/measures
+hdfs dfs -ls /user/w205/hospital_compare/spendingperpatient
+hdfs dfs -ls /user/w205/hospital_compare/payment
+hdfs dfs -ls /user/w205/hospital_compare/readmissions
+hdfs dfs -ls /user/w205/hospital_compare/timelycare
+hdfs dfs -ls /user/w205/hospital_compare/hvbp
