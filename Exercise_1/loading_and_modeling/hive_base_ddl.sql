@@ -58,6 +58,7 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/measures';
 
+
 DROP TABLE timelycare;
 
 CREATE EXTERNAL TABLE timelycare(provider string, hosp_name string, address string, city string, state string, zip string, county string, phone string, condition string, measureid string, measurenm string, score string, sample string, foot string, measure_start string, measure_end string)
