@@ -1,3 +1,4 @@
+
 DROP INDEX IDX_Hosp ON Hospitals;
 DROP TABLE Hospitals;
 
