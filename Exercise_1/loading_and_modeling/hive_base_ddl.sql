@@ -1,3 +1,4 @@
+
 DROP TABLE tbhospitals;
 
 CREATE EXTERNAL TABLE tbhospitals(provider string, hosp_name string, address string, city string, state string, zip string, county string, phone string, hosp_type string, ownership string, emergency string)
