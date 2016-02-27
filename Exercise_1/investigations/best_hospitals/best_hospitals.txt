@@ -28,7 +28,7 @@ hospitals are models of high-quality care, one must identify hospitals that rank
 better than the national average on more measurements than their peers.
 
 The above 10 hospitals scored better than the national average on more measurements
-in complications, readmissions, and complications than any of the other 4,824 hospitals.
+in complications, readmissions, and infections than any of the other 4,824 hospitals.
 The rank represents a roll-up of the metrics in which they scored well.  The metrics
 represented a broad variety of procedures, mortality, and complications/infections
 that are critical to providing efficient and effective healthcare.

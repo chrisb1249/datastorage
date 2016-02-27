@@ -1,0 +1,41 @@
+Question #2: What states are models of high-quality care?
+
+Answer:
+State   Score   Num_of_hospitals  Final_Score
+-----   -----   ----------------  -------------------
+AL      217     91                2.3846153846153846
+FL      418     189               2.2116402116402116
+OR      126     61                2.0655737704918034
+DC      18      9                 2.0
+OH      319     170               1.8764705882352941
+HI      31      18                1.7222222222222223
+TX      571     377               1.5145888594164456
+MI      189     137               1.3795620437956204
+PA      238     174               1.367816091954023
+PR      68      52                1.3076923076923077
+
+Conclusions:
+
+In order to evaluate how one state is performing against another state, you must
+look at both how their individual measurements compare to national averages, while
+weighting that with the number of hospitals in the state.  Using this approach,
+Alabama, Florida, and Oregon were the top three states (with DC, OH, HI, TX, MI,
+PA, and PR following).  As an example of how the final score was calculated, when
+all of the "Worse than the National Benchmark" results were subtracted from the
+number of "Better than the National Benchmark" scores, Alabama ended up with a
+total of 217 favorable measurements.  This value was divided by the number of
+reporting hospitals to weight the final score appropriately.  While some states
+have exceptional hospitals, this approach evaluates the state on a more holistic,
+overall vantage point.
+
+Approach:
+
+Each state was awarded one point for a metric that rated "Better than the National
+Benchmark" using the complications, infections, and readmissions data from the
+Medicare data set for all 4,824 hospitals represented.  Each state lost a point
+for any measurements that scored "Worse than the National Benchmark".  These scores
+were summed up to generate the "Score" data in the table above.  This score value
+was used as the numerator, and the number of hospitals in each state was used as
+the denominator to calculate the Final Score.  The weighting by number of hospitals
+was important to balance out states with many more hospitals, which resulted in more
+opportunities to have "Better than national benchmark" scores.

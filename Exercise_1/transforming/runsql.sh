@@ -5,3 +5,5 @@ hive -f ./infections.sql
 hive -f ./timelycare.sql
 hive -f ./hcahps
 hive -f ./measures.sql
+hive -f ./better.sql
+hive -f ./tallystate.sql

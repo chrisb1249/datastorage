@@ -22,6 +22,6 @@ DROP TABLE TALLY;
 
 CREATE TABLE TALLY(provider string, hosp_name string, city string, state string, measurenm string, source int, score int);
 
-INSERT INTO TABLE TALLY select Better.provider, Better.hosp_name, Better.city, Better.state, Better.measurenm, Better.better_src, 1);
+INSERT INTO TABLE TALLY select Better.provider, Better.hosp_name, Better.city, Better.state, Better.measurenm, Better.better_src, 1 from Better;
 
-INSERT INTO TABLE TALLY select Worse.provider, Worse.hosp_name, Worse.city, Worse.state, Worse.measurenm, Worse.worse_src, -1);
+INSERT INTO TABLE TALLY select Worse.provider, Worse.hosp_name, Worse.city, Worse.state, Worse.measurenm, Worse.worse_src, -1 from Worse;
