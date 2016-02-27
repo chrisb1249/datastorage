@@ -1,0 +1,40 @@
+W205 Data Storage and Retrieval
+Exercise 1
+Chris Bennett
+Question #3: Which procedures have the greatest variability between hospitals?
+
+Answer:
+
+Procedure (Measure Name)                                                Measure ID  Variance
+--------------------------------------------------------------------    ----------  -----------------
+Median Time from ED Arrival to ED Departure for Admitted ED Patients    ED_1b       8617.740839212507
+Admit Decision Time to ED Departure Time for Admitted Patients          ED_2b       3864.6924460743544
+Median Time from ED Arrival to ED Departure for Discharged ED Patients  OP_18b      1656.5529409803205
+Median Time to Transfer to Another Facility...Acute Coronary Interventi OP_3b       869.0306968514053
+Thrombolytic Therapy                                                    STK_4       481.98665882944397
+Head CT Scan Results for Acute Ischemic Stroke or Hemorrhagic Stroke Pa OP_23       477.18888614639235
+Fibrinolytic Therapy Received within 30 Minutes of Hospital Arrival     AMI_7a      352.6666666666667
+Fibrinolytic Therapy Received Within 30 Minutes of ED Arrival           OP_2        325.74632352941165
+Median Time to Pain Management for Long Bone Fracture                   OP_21       314.0819735739413
+Median Time from ED Arrival to Provider Contact for ED patients         OP_20       285.00371267017476
+
+Conclusion:
+
+First and foremost, the data contained within the Timely and Effective Care and
+the Readmissions data table are not typically considered 'procedures' in the medical
+sense.  However, for the purposes of this exercise, we will treat them as such.
+
+The highest variance seen was with three metrics related to Emergency Department Time
+for admitting and releasing patients.  This is as I would have expected due to large
+variations in wait times across hospitals.  Interestingly, all 10 of the highest
+variance ratings were related to some form of emergency care.  Not seen in this
+Top-10 list are the procedures with the lowest degrees of variance, which include:
+Death rate for CABG, Heart Failure 30-day Mortality Rate, and several other Death
+Rate values.
+
+Approach:
+
+By combining the scores from both the Timely and Effective Care and the Readmissions
+tables and converting the scores into an integer, I was able to use the HIVE SQL
+Variance operator to calculate variance.  I tested this alongside min, max, avg,
+and standard deviation and the results were correct.
