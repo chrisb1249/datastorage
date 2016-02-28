@@ -28,10 +28,11 @@ calculation, but since my result was no correlation I am not concerned with the 
 
 Additional Research:
 
-In the future, I would like to export the data and perform a regression model
-to more accurately determine a correlation.  Additionally, I am concerned about the star rating being a likert
-scale value, which does not typically perform well in a correlation study.  To balance this, I would like to also
-run a model on the log() value of the star ratings in order to spread out the potential values represented.
+In the future, I would like to export the data and perform a regression model to more accurately determine a correlation.  
+Additionally, I am concerned about the star rating being a likert scale value, which does not typically perform well 
+in a correlation study.  To balance this, I would like to also run a model on the log() value of the star ratings in 
+order to spread out the potential values represented. 
+
 And lastly, I would like to spend more time on the Time and Efficient Care data.  There is some good information
 present, but it is very challenging to split out which scores are percentiles and which are ratings...additionally
 it is difficult to differentiate between measurements in which a low score is good vs where a low score is bad.
