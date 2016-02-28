@@ -1,0 +1,37 @@
+W205 Data Storage and Retrieval
+Exercise #1
+Chris Bennett
+
+Question #4: Are average scores for hospital quality or procedural variability correlated with patient survey responses?
+
+Answer: Pearson's Correlation Coefficient of Mean(HCAHPS Star) and Custom Hospital Ratings using "Better Than" scores = -0.056 (no correlation)
+
+Conclusions:
+
+There does not appear to be a correlation between hospital quality and the patient survey responses.  Using
+Pearson's Correlation Coefficient calculation, I determined there is a -0.056 (negligible) correlation between
+the mean survey response (star rating) for a hospital and their ranking (based on Better Than National Rate scores.
+Pearson's Correlation Coefficient can range from -1 to 1, and values approaching zero indicate a lack of 
+correlation.
+
+Approach:
+
+I used my hospital ranking system from the first question, where I combined the ratings from the Infections,
+Readmissions, and Complications tables and gave a point for every rating in which the hospital scored "Better
+than the National Rate" (or similar verbiage).  I then created a different table that generated a simple mean
+of the star ratings for each hospital from the HCAHPS data.  By combining the star ratings with my hospital
+rankings score into a single table that contained one record per hospital, I was able to utilize the hive SQL
+CORR() function to run a correlation.  I should also note that I have a very challenging time handling records
+with null values in the HCAHPS star field, as it appears there are numerous bugs and shortcomings with hive 
+in this functionality.  I'm concerned that the presence of null values may have influenced my correlation 
+calculation, but since my result was no correlation I am not concerned with the nulls creating a bias.
+
+Additional Research:
+
+With more time to focus on this exercise, I would like to export the data and perform a regression model
+to more accurately determine a correlation.  Additionally, I am concerned about the star rating being a likert
+scale value, which does not typically perform well in a correlation study.  To balance this, I would like to also
+run a model on the log() value of the star ratings in order to spread out the potential values represented.
+And lastly, I would like to spend more time on the Time and Efficient Care data.  There is some good information
+present, but it is very challenging to split out which scores are percentiles and which are ratings...additionally
+it is difficult to differentiate between measurements in which a low score is good vs where a low score is bad.

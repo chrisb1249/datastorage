@@ -8,3 +8,4 @@ hive -f ./measures.sql
 hive -f ./better.sql
 hive -f ./tallystate.sql
 hive -f ./hospitalvar.sql
+hive -f ./hosppat.sql
