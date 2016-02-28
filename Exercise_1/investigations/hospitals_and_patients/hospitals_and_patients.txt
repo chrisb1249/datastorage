@@ -36,3 +36,5 @@ order to spread out the potential values represented.
 And lastly, I would like to spend more time on the Time and Efficient Care data.  There is some good information
 present, but it is very challenging to split out which scores are percentiles and which are ratings...additionally
 it is difficult to differentiate between measurements in which a low score is good vs where a low score is bad.
+
+CB
