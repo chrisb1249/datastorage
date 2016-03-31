@@ -1,0 +1,44 @@
+W205 Data Storage and Retrieval
+Exercise 1
+Chris Bennett 
+
+Question #1: What hospitals are models of high-quality care? That is, which hospitals
+have the most consistently high scores for a variety of procedures.
+
+Answer:
+
+Provid  Hospital Name                           ST      Rank
+------  ------------------------------------    --      --
+260137  FREEMAN HEALTH SYSTEM - FREEMAN WEST    MO      33
+450209  NORTHWEST TEXAS HOSPITAL                TX      32
+340091  MOSES H CONE MEMORIAL HOSPITAL, THE     NC      29
+100018  NAPLES COMMUNITY HOSPITAL               FL      27
+450119  SOUTH TEXAS HEALTH SYSTEM               TX      26
+110161  NORTHSIDE HOSPITAL                      GA      25
+140010  EVANSTON HOSPITAL                       IL      25
+100039  BROWARD HEALTH MEDICAL CENTER           FL      24
+400109  HIMA SAN PABLO BAYAMON                  PR      24
+230070  COVENANT MEDICAL CENTER                 MI      24
+
+Conclusions:
+
+At the heart of any hospital's performance is their ability to cure patients and
+to minimize infections, readmissions, and complications.  In order to identify which
+hospitals are models of high-quality care, one must identify hospitals that rank
+better than the national average on more measurements than their peers.
+
+The above 10 hospitals scored better than the national average on more measurements
+in complications, readmissions, and infections than any of the other 4,824 hospitals.
+The rank represents a roll-up of the metrics in which they scored well.  The metrics
+represented a broad variety of procedures, mortality, and complications/infections
+that are critical to providing efficient and effective healthcare.
+
+The Approach:
+
+Upon close inspection of the variety of metrics contained within this data set,
+it was apparent that high scores could represent a good result with one metric
+and a bad result with another.  I selected off records that included metrics rated as
+'better than national average' or 'better than national rate' from the complications,
+readmissions, and infections tables and appended them to a table named 'BETTER'.
+Once this data was compiled, a roll-up query was run to count the number of
+'better than...' measurements at a hospital level.

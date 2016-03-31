@@ -1,0 +1,11 @@
+hive -f ./hospitals.sql
+hive -f ./complications.sql
+hive -f ./readmissions.sql
+hive -f ./infections.sql
+hive -f ./timelycare.sql
+hive -f ./hcahps
+hive -f ./measures.sql
+hive -f ./better.sql
+hive -f ./tallystate.sql
+hive -f ./hospitalvar.sql
+hive -f ./hosppat.sql
