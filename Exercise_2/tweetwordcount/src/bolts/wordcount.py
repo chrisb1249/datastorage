@@ -1,4 +1,4 @@
-from __future__ import absolute_import, print_function, unicode_literals
+from __future__ import absolute_import, print_function, unicode_literals, psycopg2
 
 from collections import Counter
 from streamparse.bolt import Bolt
@@ -27,3 +27,18 @@ class WordCounter(Bolt):
 
         # Log the count - just to see the topology running
         self.log('%s: %d' % (word, self.counts[word]))
+
+	conn = psycopg2.connect(database="tcount", user"postgres", password="pass", host="localhost", port="5432")
+
+	cur = conn.cursor()
+
+	cur.execute("INSERT INTO Tweetwordcount (word, count) VALUES (%S,1)",(word))
+
+	conn.commit()
+
+	cur.execute("UPDATE Tweetwordcount SET count=%s WHERE word=%s", (self.counts[word], word))
+
+	conn.commit()
+
+	conn.close()
+

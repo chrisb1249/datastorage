@@ -7,17 +7,17 @@
 
 import psycopg2
 
-conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+conn = psycopg2.connect(database="Tcount", user="postgres", password="pass", host="localhost", port="5432")
 
 #Create a Table
 #The first step is to create a cursor. 
 
-#cur = conn.cursor()
-#cur.execute('''CREATE TABLE Tweetwordcount
-#       (word TEXT PRIMARY KEY     NOT NULL,
-#       count INT     NOT NULL);''')
-#conn.commit()
-#conn.close()
+cur = conn.cursor()
+cur.execute('''CREATE TABLE Tweetwordcount
+       (word TEXT PRIMARY KEY     NOT NULL,
+       count INT     NOT NULL);''')
+conn.commit()
+conn.close()
 
 
 #Running sample SQL statements
@@ -30,14 +30,14 @@ conn = psycopg2.connect(database="tcount", user="postgres", password="pass", hos
 cur = conn.cursor()
 
 #Insert
-#cur.execute("INSERT INTO Tweetwordcount (word,count) \
-#      VALUES ('test', 1)");
-#conn.commit()
+cur.execute("INSERT INTO Tweetwordcount (word,count) \
+      VALUES ('test', 1)");
+conn.commit()
 
 #Update
 #Assuming you are passing the tuple (uWord, uCount) as an argument
-#cur.execute("UPDATE Tweetwordcount SET count=%s WHERE word=%s", (uWord, uCount))
-#conn.commit()
+cur.execute("UPDATE Tweetwordcount SET count=%s WHERE word=%s", (uWord, uCount))
+conn.commit()
 
 #Select
 cur.execute("SELECT word, count from Tweetwordcount")
