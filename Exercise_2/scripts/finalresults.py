@@ -14,7 +14,7 @@ if len(list(sys.argv)) >= 2:
 
 else:
 
-   cur.execute("select * from Tweetwordcount order by word asc")
+   cur.execute("select * from Tweetwordcount order by count desc")
    records = cur.fetchall()
    for i in range(0,len(records)):
       print "%s: %s" % (str(records[i][0]),str(records[i][1]))

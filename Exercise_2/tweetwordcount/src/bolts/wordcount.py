@@ -33,7 +33,7 @@ class WordCounter(Bolt):
 	word = ''.join(ch for ch in word if ch not in exclude)
 	word = word.lower()
 
-	removewrds = ['the','of','and','to','a','in','for','is','on','that','by','this','with','i','you','it','not','or','be','are','from','at','as','your','all','have','new','more','an','was','we','will','home','can','us','about','if','my','page','has','but','our','other','do','no','they','u']
+	removewrds = [' ','im','just','when','his','its','he','what','so','the','of','and','to','a','in','for','is','on','that','by','this','with','i','you','it','not','or','be','are','from','at','as','your','all','have','new','more','an','was','we','will','home','can','us','about','if','my','page','has','but','our','other','do','no','they','u']
 
 	if word not in removewrds:
 	   conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432") 
